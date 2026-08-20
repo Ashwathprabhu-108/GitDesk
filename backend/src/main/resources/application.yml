@@ -1,0 +1,12 @@
+server:
+  port: 8080
+
+github:
+  client-id: ${GITHUB_CLIENT_ID:your-client-id}
+  client-secret: ${GITHUB_CLIENT_SECRET:your-client-secret}
+  redirect-uri: gitdesk://auth/callback
+  scopes: repo,user,delete_repo
+
+spring:
+  application:
+    name: gitdesk-backend

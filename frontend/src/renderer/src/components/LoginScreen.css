@@ -1,0 +1,77 @@
+.login-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--color-bg);
+  animation: fadeIn var(--transition-slow) ease;
+}
+
+.login-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 360px;
+}
+
+.login-logo {
+  margin-bottom: var(--space-6);
+  animation: slideUp 0.4s ease;
+}
+
+.login-logo svg {
+  filter: drop-shadow(0 2px 8px rgba(26, 29, 33, 0.15));
+}
+
+.login-title {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  letter-spacing: -0.03em;
+  margin-bottom: var(--space-2);
+  animation: slideUp 0.4s ease 0.05s both;
+}
+
+.login-subtitle {
+  font-size: var(--font-size-md);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--space-8);
+  animation: slideUp 0.4s ease 0.1s both;
+}
+
+.login-button {
+  width: 100%;
+  padding: var(--space-3) var(--space-6);
+  font-size: var(--font-size-md);
+  border-radius: var(--radius-lg);
+  animation: slideUp 0.4s ease 0.15s both;
+}
+
+.login-button svg {
+  flex-shrink: 0;
+}
+
+.login-note {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-tertiary);
+  margin-top: var(--space-4);
+  animation: slideUp 0.4s ease 0.2s both;
+}
+
+.login-footer {
+  position: absolute;
+  bottom: var(--space-6);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-tertiary);
+}
+
+.login-footer-dot {
+  opacity: 0.4;
+}

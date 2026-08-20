@@ -1,0 +1,104 @@
+.repo-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-6) var(--space-8);
+}
+
+.repo-list-header {
+  margin-bottom: var(--space-5);
+}
+
+.repo-list-header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-4);
+}
+
+.repo-list-title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.repo-list-count {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-tertiary);
+  background-color: var(--color-bg-subtle);
+  padding: 1px var(--space-2);
+  border-radius: var(--radius-full);
+}
+
+.repo-list-filters {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.repo-list-search {
+  flex: 1;
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-tertiary);
+  pointer-events: none;
+}
+
+.repo-search-input {
+  padding-left: 32px;
+}
+
+.repo-list-filter-buttons {
+  display: flex;
+  gap: 2px;
+  background-color: var(--color-bg-subtle);
+  border-radius: var(--radius-md);
+  padding: 2px;
+}
+
+.filter-active {
+  background-color: var(--color-bg-elevated) !important;
+  color: var(--color-text-primary) !important;
+  box-shadow: var(--shadow-xs);
+}
+
+.repo-list-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.repo-list-loading {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.repo-card-skeleton {
+  background-color: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+}
+
+.repo-list-error {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  background-color: var(--color-danger-subtle);
+  border: 1px solid rgba(220, 38, 38, 0.15);
+  border-radius: var(--radius-md);
+  color: var(--color-danger-text);
+  font-size: var(--font-size-sm);
+  margin-bottom: var(--space-4);
+}
