@@ -49,3 +49,5 @@ desktop.ini
 .env.local
 .env.*.local
 application-local.yml
+application-local.properties
+**/application-local.*

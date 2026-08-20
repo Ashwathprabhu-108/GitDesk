@@ -10,11 +10,15 @@ const BACKEND_URL = `http://localhost:${BACKEND_PORT}`
 /**
  * Register the gitdesk:// custom protocol for OAuth callbacks.
  * Must be called before app.ready.
+ * In dev mode, pass the resolved path to the built main entry so Windows
+ * registers: electron.exe "<path>/out/main/index.js" "%1"
  */
 if (process.defaultApp) {
-  if (process.argv.length >= 2) {
-    app.setAsDefaultProtocolClient('gitdesk', process.execPath, [process.argv[1]])
-  }
+  // Dev mode: argv[1] is the entry script passed to electron
+  const appEntry = process.argv[1]
+    ? require('path').resolve(process.argv[1])
+    : join(__dirname, 'index.js')
+  app.setAsDefaultProtocolClient('gitdesk', process.execPath, [appEntry])
 } else {
   app.setAsDefaultProtocolClient('gitdesk')
 }

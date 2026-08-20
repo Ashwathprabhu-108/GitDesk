@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.4",
-    "electron": "^33.3.1",
+    "electron": "^33.4.11",
     "electron-builder": "^26.0.12",
     "electron-vite": "^3.0.0",
     "react": "^18.3.1",
@@ -30,7 +30,9 @@
       "output": "release"
     },
     "win": {
-      "target": ["nsis"],
+      "target": [
+        "nsis"
+      ],
       "icon": "resources/icon.png"
     },
     "nsis": {
@@ -39,7 +41,9 @@
     },
     "protocols": {
       "name": "GitDesk Protocol",
-      "schemes": ["gitdesk"]
+      "schemes": [
+        "gitdesk"
+      ]
     }
   }
 }
